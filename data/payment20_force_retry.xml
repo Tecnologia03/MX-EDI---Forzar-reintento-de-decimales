@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="payment20_force_retry_decimals"
+              inherit_id="l10n_mx_edi.payment20"
+              priority="999">
+
+        <!-- CRP20268: only during the manual forced retry. -->
+        <xpath expr="//*[local-name()='TrasladoDR']" position="attributes">
+            <attribute name="t-att-BaseDR">
+                env['account.payment']._l10n_mx_force_truncate_decimal(
+                    tax_values['base'], invoice_values['currency_precision']
+                )
+                if env.context.get('l10n_mx_force_fix_crp20268')
+                else invoice_values['format_float'](
+                    tax_values['base'],
+                    precision=6 if invoice_values['equivalencia'] else invoice_values['currency_precision']
+                )
+            </attribute>
+            <attribute name="t-att-ImporteDR">
+                env['account.payment']._l10n_mx_force_truncate_decimal(
+                    tax_values['importe'], invoice_values['currency_precision']
+                )
+                if env.context.get('l10n_mx_force_fix_crp20268')
+                else invoice_values['format_float'](
+                    tax_values['importe'],
+                    precision=6 if invoice_values['equivalencia'] else invoice_values['currency_precision']
+                )
+            </attribute>
+        </xpath>
+
+        <!-- CRPER654: BaseP may not exceed MonedaP decimal precision. -->
+        <xpath expr="//*[local-name()='TrasladoP']" position="attributes">
+            <attribute name="t-att-BaseP">
+                format_float(tax_values['base'], precision=record.currency_id.decimal_places)
+                if env.context.get('l10n_mx_force_fix_crper654')
+                else format_float(tax_values['base'])
+            </attribute>
+        </xpath>
+
+    </template>
+</odoo>

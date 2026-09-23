@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Runs on install and upgrade. It locates the real MX CFDI Retry row button. -->
+    <function model="ir.ui.view" name="l10n_mx_force_retry_install_views"/>
+</odoo>
