@@ -4,7 +4,7 @@
 {
     "name": "MX EDI - Forzar reintento de decimales",
     "summary": "Detección automática y reintento para CRP20268 y CRPER654 en complementos de pago",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "author": "Globalbtek",
     "license": "AGPL-3",
     "depends": [
