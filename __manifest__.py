@@ -6,7 +6,7 @@
     "summary": "Detección automática y reintento para CRP20268 y CRPER654 en complementos de pago",
     "version": "19.0.1.0.0",
     "author": "Globalbtek",
-    "license": "LGPL-3",
+    "license": "AGPL-3",  # <-- Actualizado de "LGPL-3" a "AGPL-3"
     "depends": [
         "account_edi",
         "l10n_mx_edi",
