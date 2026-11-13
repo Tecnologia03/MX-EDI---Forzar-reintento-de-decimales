@@ -6,7 +6,6 @@
     "summary": "Detección automática y reintento para CRP20268 y CRPER654 en complementos de pago",
     "version": "19.0.1.0.0",
     "author": "Globalbtek",
-    "license": "LGPL-3",  # <-- Requerido para ser compatible con dependencias Enterprise (OEEL-1 / OPL-1)
     "depends": [
         "account_edi",
         "l10n_mx_edi",
