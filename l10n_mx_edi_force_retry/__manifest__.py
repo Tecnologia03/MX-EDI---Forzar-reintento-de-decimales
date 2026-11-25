@@ -1,12 +1,12 @@
 # Copyright 2026 Globalbtek
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+# License OPL-1 (Odoo Proprietary License v1.0)
 
 {
     "name": "MX EDI - Forzar reintento de decimales",
     "summary": "Detección automática y reintento para CRP20268 y CRPER654 en complementos de pago",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "author": "Globalbtek",
-    "license": "AGPL-3",
+    "license": "OPL-1",
     "depends": [
         "account_edi",
         "l10n_mx_edi",
