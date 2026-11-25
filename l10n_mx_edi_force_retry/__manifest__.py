@@ -1,5 +1,5 @@
 # Copyright 2026 Globalbtek
-# License OPL-1 (Odoo Proprietary License v1.0)
+# License OPL-1
 
 {
     "name": "MX EDI - Forzar reintento de decimales",
@@ -15,6 +15,7 @@
         "data/payment20_force_retry.xml",
         "data/install_force_retry_view.xml",
     ],
+    "images": ["static/description/banner.png"],
     "installable": True,
     "application": False,
 }
